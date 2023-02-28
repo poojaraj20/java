@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class Palindrome
+{
+int n,d,rev=0,a;
+int checkpalindrome()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the Number");
+n=sc.nextInt();
+num=n;
+while(num>0)
+{
+d=num%10;
+rev=(rev*10)+d;
+num=num/10;
+}
+if(n==rev)
+{
+flag++;
+}
+return flag;
+}
+void display()
+{
+if(flag!=0)
+{
+System.out.println("The Number is pallindrome");
+}
+else
+{
+System.out.println("Number is not Pallindrome");
+}
+}
+public static void main(String args[])
+{
+Pal br=new Pal();
+br.checkpal();
+br.display();
+}
+}
+
